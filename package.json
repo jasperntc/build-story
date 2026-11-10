@@ -1,0 +1,29 @@
+{
+  "name": "build-story",
+  "version": "0.1.0",
+  "description": "A captioned 9:16 video of a web app growing, one frame per build, from your git history.",
+  "license": "MIT",
+  "author": "Jasper Ng",
+  "repository": "github:jasperntc/build-story",
+  "type": "module",
+  "bin": {
+    "build-story": "dist/src/cli.js"
+  },
+  "files": [
+    "dist",
+    "assets"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"src/**/*.test.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "typescript": "~6.0.3"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}
